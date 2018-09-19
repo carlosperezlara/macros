@@ -228,8 +228,8 @@ int G4Setup(const int absorberactive = 0,
 
   //----------------------------------------
   // BLACKHOLE
-
   // swallow all particles coming out of the backend of sPHENIX
+  /*
   PHG4CylinderSubsystem *blackhole = new PHG4CylinderSubsystem("BH", 1);
   blackhole->set_double_param("radius",radius + 100); // add 100 cm
 
@@ -267,6 +267,7 @@ int G4Setup(const int absorberactive = 0,
   blackhole->SetActive(); // always see what leaks out
   blackhole->OverlapCheck(overlapcheck);
   g4Reco->registerSubsystem(blackhole);
+  */
 
   PHG4TruthSubsystem *truth = new PHG4TruthSubsystem();
   g4Reco->registerSubsystem(truth);

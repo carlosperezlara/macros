@@ -51,7 +51,7 @@ void Tracking_Reco(int verbosity = 0, TString fileout="auto.root")
   // Kalman Filter
   //---------------------
 
-  PHG4TrackFastSim* kalman = new PHG4TrackFastSim("PHG4TrackFastSim",fileout.Data());
+  PHG4EICTrackingBase* kalman = new PHG4EICTrackingBase("PHG4EICTrackingBase",fileout.Data());
   kalman->Verbosity(0);
 
   kalman->VertexIn();
@@ -65,14 +65,14 @@ void Tracking_Reco(int verbosity = 0, TString fileout="auto.root")
 				    "G4HIT_FGEM_3O","G4HIT_FGEM_3I",
 				    "G4HIT_FGEM_4O","G4HIT_FGEM_4I"};
   int dettypes[16] = {
-    PHG4TrackFastSim::Cylinder, PHG4TrackFastSim::Cylinder, // SVTX TPC | phi, lon
-    PHG4TrackFastSim::Vertical_Plane,PHG4TrackFastSim::Vertical_Plane, // EGEM01 | rad, phi
-    PHG4TrackFastSim::Vertical_Plane,PHG4TrackFastSim::Vertical_Plane, // EGEM2  | rad, phi
-    PHG4TrackFastSim::Vertical_Plane,PHG4TrackFastSim::Vertical_Plane, // EGEM3  | rad, phi
-    PHG4TrackFastSim::Vertical_Plane,PHG4TrackFastSim::Vertical_Plane, // FGEM01 | rad, phi
-    PHG4TrackFastSim::Vertical_Plane,PHG4TrackFastSim::Vertical_Plane, // FGEM2  | rad, phi
-    PHG4TrackFastSim::Vertical_Plane,PHG4TrackFastSim::Vertical_Plane, // FGEM3  | rad, phi
-    PHG4TrackFastSim::Vertical_Plane,PHG4TrackFastSim::Vertical_Plane};// FGEM4  | rad, phi
+    PHG4EICTrackingBase::Cylinder, PHG4EICTrackingBase::Cylinder, // SVTX TPC | phi, lon
+    PHG4EICTrackingBase::Vertical_Plane,PHG4EICTrackingBase::Vertical_Plane, // EGEM01 | rad, phi
+    PHG4EICTrackingBase::Vertical_Plane,PHG4EICTrackingBase::Vertical_Plane, // EGEM2  | rad, phi
+    PHG4EICTrackingBase::Vertical_Plane,PHG4EICTrackingBase::Vertical_Plane, // EGEM3  | rad, phi
+    PHG4EICTrackingBase::Vertical_Plane,PHG4EICTrackingBase::Vertical_Plane, // FGEM01 | rad, phi
+    PHG4EICTrackingBase::Vertical_Plane,PHG4EICTrackingBase::Vertical_Plane, // FGEM2  | rad, phi
+    PHG4EICTrackingBase::Vertical_Plane,PHG4EICTrackingBase::Vertical_Plane, // FGEM3  | rad, phi
+    PHG4EICTrackingBase::Vertical_Plane,PHG4EICTrackingBase::Vertical_Plane};// FGEM4  | rad, phi
   float rad[16] = {5.0,  10000,10000,10000,10000,10000,10000,10000,
 		   10000,10000,10000,10000,10000,10000,10000,10000};
   float phi[16] = {5.0,  150,  50,   50,  100,   50,  100,    50,

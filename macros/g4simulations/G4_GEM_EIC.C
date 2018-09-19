@@ -15,7 +15,6 @@ FGEM_Init()
 void
 EGEMSetup(PHG4Reco* g4Reco)
 {
-  return;
   /* Careful with dimensions! If GEM station volumes overlap, e.g. with TPC volume, they will be
    * drawn in event display but will NOT register any hits.
    *
